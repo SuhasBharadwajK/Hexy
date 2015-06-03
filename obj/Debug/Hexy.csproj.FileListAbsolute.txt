@@ -1,0 +1,13 @@
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\bin\Debug\Hexy.exe.config
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\bin\Debug\Hexy.exe
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\bin\Debug\Hexy.pdb
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.csprojResolveAssemblyReference.cache
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\MainWindow.baml
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\MainWindow.g.cs
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\App.g.cs
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy_MarkupCompile.cache
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.g.resources
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.Properties.Resources.resources
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.csproj.GenerateResource.Cache
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.exe
+c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.pdb
