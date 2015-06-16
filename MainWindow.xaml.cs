@@ -20,9 +20,12 @@ namespace Hexy
     /// </summary>
     public partial class MainWindow : Window
     {
+        string player = "player1";
         public MainWindow()
         {
             InitializeComponent();
+            PipeServer Server = new PipeServer(player);
+            PipeClient Client = new PipeClient(player);
         }
     }
 }
