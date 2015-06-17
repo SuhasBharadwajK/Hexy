@@ -12,8 +12,8 @@ namespace Hexy
         public delegate void MessageSender(string id);
         public PipeServer(string name)
         {
-            NamedPipeServerStream _pipeStream = new NamedPipeServerStream(name, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
-
+            //NamedPipeServerStream senderStream = new NamedPipeServerStream(name, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
+            
         }
     }
 }

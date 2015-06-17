@@ -13,7 +13,7 @@ namespace Hexy
 
         public PipeClient(string name)
         {
-            NamedPipeClientStream _clientStream = new NamedPipeClientStream(".", name, PipeDirection.Out, PipeOptions.Asynchronous);
+            //NamedPipeClientStream _clientStream = new NamedPipeClientStream(".", name, PipeDirection.Out, PipeOptions.Asynchronous);
         }
     }
 }

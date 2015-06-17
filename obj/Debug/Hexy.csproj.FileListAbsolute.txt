@@ -11,3 +11,16 @@ c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.Pr
 c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.csproj.GenerateResource.Cache
 c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.exe
 c:\users\suhas\documents\visual studio 2013\Projects\Hexy\Hexy\obj\Debug\Hexy.pdb
+C:\Users\cselab1\Documents\GitHub\Hexy\bin\Debug\Hexy.exe.config
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy.exe
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy.pdb
+C:\Users\cselab1\Documents\GitHub\Hexy\bin\Debug\Hexy.exe
+C:\Users\cselab1\Documents\GitHub\Hexy\bin\Debug\Hexy.pdb
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy.csprojResolveAssemblyReference.cache
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\MainWindow.baml
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\MainWindow.g.cs
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\App.g.cs
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy_MarkupCompile.cache
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy.g.resources
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy.Properties.Resources.resources
+C:\Users\cselab1\Documents\GitHub\Hexy\obj\Debug\Hexy.csproj.GenerateResource.Cache
