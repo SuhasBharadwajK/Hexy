@@ -23,7 +23,8 @@ namespace Hexy
 
     public partial class MainWindow : Window
     {
-        string player;
+        int currentPlayer = 1;
+        
 
         Process player1;
         Process player2;
@@ -36,16 +37,20 @@ namespace Hexy
             InitializeComponent();
 
             this.Title = "Manager";
+            start();
+            StartListening();
+            PipeServer server1 = new PipeServer("player1");
+            PipeServer server2 = new PipeServer("player2");
 
-            PipeServer Server = new PipeServer(player);
-            PipeClient Client = new PipeClient(player);
-            select();            
+            PipeClient client1 = new PipeClient("player1");
+            PipeClient client2 = new PipeClient("player2");
         }
 
-        private void select()
+        private void start()
         {
-            int choice = new Random().Next(2);
             string firstPlayer, secondPlayer;
+            int choice = new Random().Next(2);
+                        
 
             if (choice == 0)
             {
@@ -56,7 +61,7 @@ namespace Hexy
             {
                 firstPlayer = "blue";
                 secondPlayer = "red";
-            }
+            }            
 
             player1 = new Process();
             player1.StartInfo.FileName = "..\\..\\..\\HexPlayer\\obj\\Debug\\HexPlayer.exe";            
@@ -71,6 +76,16 @@ namespace Hexy
 
             pl1.Start();
             pl2.Start();
+        }
+
+        private void CreatePipe()
+        {
+            PipeServer server = new PipeServer("player" + currentPlayer.ToString());
+        }
+
+        private void StartListening()
+        {
+            
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
