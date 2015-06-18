@@ -66,8 +66,8 @@ namespace Hexy
             player2.StartInfo.FileName = "..\\..\\..\\HexPlayer\\obj\\Debug\\HexPlayer.exe";            
             player2.StartInfo.Arguments = secondPlayer + " 2";
 
-            pl1 = new Thread(new ThreadStart(() => player1.Start()));
-            pl2 = new Thread(new ThreadStart(() => player2.Start()));
+            pl1 = new Thread(() => player1.Start());
+            pl2 = new Thread(() => player2.Start());
 
             pl1.Start();
             pl2.Start();
