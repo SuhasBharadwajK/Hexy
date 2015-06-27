@@ -16,23 +16,24 @@ namespace Hexy
         public PipeServer(string pipeName)
         {
             pipeStream = new NamedPipeServerStream(pipeName, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
-            pipeStream.BeginWaitForConnection(ConnectWait, pipeStream);
+            pipeStream.BeginWaitForConnection(Waiting, pipeStream);
             
         }
 
-        private void ConnectWait(IAsyncResult result)
+        private void Waiting(IAsyncResult result)
         {
             try
             {
                 NamedPipeServerStream pipe = (NamedPipeServerStream)result.AsyncState;
                 byte[] pipeBuffer = new byte[255];
+                pipe.Read(pipeBuffer, 0, 255);
 
                 string data = Encoding.UTF8.GetString(pipeBuffer);
             }
             catch (Exception e)
             {
                 
-                throw;
+                throw e;
             }
             
         }
