@@ -11,24 +11,48 @@ namespace Hexy
     class PipeServer
     {
         public event MessageSender CallbackMethod;
+        string pipeName;
         
         NamedPipeServerStream pipeStream;
+
         public PipeServer(string pipeName)
         {
-            pipeStream = new NamedPipeServerStream(pipeName, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
-            pipeStream.BeginWaitForConnection(Waiting, pipeStream);
-            
+            this.pipeName = pipeName;
         }
 
-        private void Waiting(IAsyncResult result)
+        public void Listener(string pipeName)
+        {
+            try
+            {
+                pipeStream = new NamedPipeServerStream(pipeName, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
+                pipeStream.BeginWaitForConnection(Waiter, pipeStream);                
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+        private void Waiter(IAsyncResult result)
         {
             try
             {
                 NamedPipeServerStream pipe = (NamedPipeServerStream)result.AsyncState;
-                byte[] pipeBuffer = new byte[255];
-                pipe.Read(pipeBuffer, 0, 255);
+                pipe.EndWaitForConnection(result);
 
-                string data = Encoding.UTF8.GetString(pipeBuffer);
+                byte[] pipeBuffer = new byte[255];
+                
+                pipe.Read(pipeBuffer, 0, 255);
+                
+                string position = Encoding.UTF8.GetString(pipeBuffer, 0, pipeBuffer.Length);
+                CallbackMethod.Invoke(position);
+
+                pipe.Close();
+                pipe = null;
+                pipe = new NamedPipeServerStream(pipeName, PipeDirection.In, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous);
+                pipe.BeginWaitForConnection(Waiter, pipe);
+
             }
             catch (Exception e)
             {
